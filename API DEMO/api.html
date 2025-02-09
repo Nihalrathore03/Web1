@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      padding: 10px;
+      background-color: rgb(0, 0, 0);
+      color: white;
+    }
+
+    #img {
+      width: 300px;
+      height: 300px;
+      border: solid rgb(46, 44, 44) 2px;
+    }
+    #input {
+      padding: 5px;
+      height: 50px;
+      width: 50%;
+      border: solid rgb(0, 0, 0) 2px;
+      background: transparent;
+      font-size: x-large;
+      font-family: monospace;
+      color: #fff;
+    }
+
+    .gradient-background {
+      background: linear-gradient(
+        149deg,
+        #e02007,
+        #67153e,
+        #0c181a,
+        #472222,
+        #13436c,
+        #8d37be
+      );
+      background-size: 360% 360%;
+      animation: gradient-animation 24s ease infinite;
+    }
+
+    @keyframes gradient-animation {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+    #btn-grad {
+      background-image: linear-gradient(
+        to right,
+        #8009f0 0%,
+        #1a06cc 51%,
+        #8c00ff 100%
+      );
+    }
+    #btn-grad {
+      margin: 10px;
+      padding: 15px 45px;
+      text-align: center;
+      text-transform: uppercase;
+      transition: 0.5s;
+      background-size: 200% auto;
+      color: white;
+      font-weight: 600;
+
+      border-radius: 5px;
+      display: block;
+    }
+
+    #btn-grad:hover {
+      background-position: right center; /* change the direction of the change here */
+      color: #fff;
+      text-decoration: none;
+    }
+    #btn-grad1 {
+      background-image: linear-gradient(
+        to right,
+        #0eff0e 0%,
+        #fffb03 51%,
+        #1fd10f 100%
+      );
+    }
+    #btn-grad1 {
+      margin: 10px;
+      padding: 15px 45px;
+      text-align: center;
+      text-transform: uppercase;
+      transition: 0.5s;
+      background-size: 200% auto;
+      color: rgb(15, 14, 14);
+      font-weight: 600;
+
+      border-radius: 5px;
+      display: block;
+    }
+
+    #btn-grad1:hover {
+      background-position: right center; /* change the direction of the change here */
+      color: #000000;
+      text-decoration: none;
+    }
+  </style>
+  <body class="gradient-background">
+    <h1>Generate Your Desire Ideas</h1>
+
+    <input
+      placeholder="Write Your Ideas Here"
+      id="input"
+      type="text"
+      required
+    />
+
+    <img id="img" alt="" />
+    <button id="btn-grad">Generate</button>
+    <button id="btn-grad1">Download</button>
+
+    <script type="module" src="api.js"></script>
+  </body>
+</html>
